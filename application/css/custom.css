@@ -1,0 +1,344 @@
+/* Method to declare your own fonts */
+@font-face {
+    font-family: 'CocaColaFont';
+    src: url('../assets/fonts/loki_cola/LOKICOLA.TTF');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../assets/fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../assets/fonts/Oswald/static/Oswald-Regular.ttf');
+}
+
+/* Base Styles */
+body {
+    background-color: #f0f4f8;
+    font-family: 'OpenSans', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.main_contents {
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0;
+}
+
+/* Main 3D Image Section */
+#main_3d_image {
+    background-image: url(../assets/images/main_3D_538.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+}
+
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#main_text h2 {
+    color: #006699;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#main_text h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main_text p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+/* Logo Styles */
+.logo {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.logo h1, .logo h2, .logo h3, .logo p {
+    font-family: 'CocaColaFont';
+    color: #ffffff;
+    margin: 0;
+}
+
+.logo h1 {
+    font-size: 40px;
+}
+
+.logo h2 {
+    font-size: 35px;
+}
+
+.logo h3 {
+    font-size: 20px;
+}
+
+.logo p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Navbar Styles */
+.navbar_coca_cola {
+    background-color: #760003;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar_coca_cola .navbar-brand {
+    color: #f5ebeb;
+    font-size: 1.5rem;
+}
+
+.navbar_coca_cola .navbar-brand:hover {
+    color: #00ff00;
+}
+
+.navbar_coca_cola .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar_coca_cola .navbar-nav > li > a:hover, 
+.navbar_coca_cola .navbar-nav > li > a:focus {
+    color: #00ff00;
+}
+
+.navbar_coca_cola .navbar-nav .nav-item .active, 
+.navbar_coca_cola .navbar-nav > .active > a:hover, 
+.navbar_coca_cola .navbar-nav > .active > a:focus {
+    color: #760003;
+    background-color: #3399ff;
+}
+
+.navbar_coca_cola .navbar-toggler {
+    border-color: white;
+    outline: none !important;
+}
+
+.navbar_coca_cola .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #f0f4f8;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    color: #eb0025;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #030303;
+    background-color: #e98074;
+}
+
+/* Footer Styles */
+.footer {
+    font-family: 'CocaColaFont';
+    color: #f5ebeb;
+    background-color: #760003;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer .navbar-text > a {
+    font-size: 12px;
+    color: #f5ebeb;
+}
+
+.footer .navbar-text > p {
+    font-size: 14px;
+    color: #f5ebeb;
+}
+
+.footer .copyright, .footer .social {
+    padding: 0;
+}
+
+.footer .fa {
+    font-size: 20px;
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_768.jpg);
+        height: 400px;
+    }
+
+    #main_text {
+        float: right;
+        margin-top: 7%;
+    }
+
+    .navbar_coca_cola {
+        min-height: 90px;
+    }
+
+    .footer {
+        height: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_970.jpg);
+        height: 450px;
+    }
+
+    #main_text h2 {
+        font-size: 28px;
+    }
+
+    #main_text h3 {
+        font-size: 20px;
+    }
+
+    #main_text p {
+        font-size: 16px;
+    }
+
+    .logo h1 {
+        font-size: 45px;
+    }
+
+    .logo h2 {
+        font-size: 40px;
+    }
+
+    .logo h3 {
+        font-size: 25px;
+    }
+
+    .logo p {
+        font-size: 14px;
+    }
+
+    .navbar_coca_cola {
+        min-height: 90px;
+    }
+
+    .footer {
+        height: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_1400.jpg);
+        height: 500px;
+    }
+
+    #main_text {
+        margin-top: 20%;
+    }
+
+    .carousel-caption h2 {
+        color: rgba(0, 102, 153, 1);
+        font-size: 24px;
+        margin: 0 0 10px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .carousel-caption p {
+        font-size: 14px;
+        margin: 0 0 10px;
+        line-height: 1.5;
+        color: #333;
+    }
+    
+    
+    #main_text h2 {
+        font-size: 30px;
+    }
+
+    #main_text h3 {
+        font-size: 22px;
+    }
+
+    #main_text p {
+        font-size: 18px;
+    }
+
+    .logo h1 {
+        font-size: 55px;
+    }
+
+    .logo h2 {
+        font-size: 50px;
+    }
+
+    .logo h3 {
+        font-size: 30px;
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
+
+    .navbar_coca_cola {
+        min-height: 100px;
+    }
+
+    .footer {
+        height: 85px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Extra styles for extra large devices can go here */
+}

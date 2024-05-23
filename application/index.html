@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Include X3DOM CSS -->
+    <link rel="stylesheet" href="css/x3dom.css">
+
+    <!-- Link in some fonts — Not used because we finally installed the fonts
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+    -->
+
+    <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css">
+    
+    <title>Coca Cola 3D App</title>
+
+  </head>
+  <body>
+    
+    <!-- Logo and navigation bar -->
+    <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+      <div class="container">  
+        <!-- Brand -->
+        <div class="logo">
+          <a class="navbar-brand" href="#">
+          <h1>My Coca Cola Brand</h1>
+          <p>Refreshing the world, one story at a time</p>
+          </a>
+        </div>
+       <!-- Collapsible Navbar Menu Icon -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- link Menu Icon button to the links class navbar-collapse selector] -->
+<div class="collapse navbar-collapse">
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a id="navHome" class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a id="navAbout" class="nav-link" href="#" data-toggle="tooltip" title="3D apps is a final year module the purpose of which is to submit a solid web application.">About</a>
+        </li>
+        <li class="nav-item">
+            <a id="navModels" class="nav-link" href="#" data-toggle="tooltip" title="X3D Models: There are X3D models of Coke, DrPepper and Sprite. Click to see the models and the gallery.Also the web page looks much better in mobile version/half of you laptop screen hence the footer:-'" data-toggle="tab" data-target="#modelsTab">Models</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+        </li>
+    </ul>
+</div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+
+<style>
+    #models-tab-content {
+        display: none;
+    }
+</style>
+
+
+<div id="models-tab-content" style="display: none;">
+    <!-- Navigation Links -->
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#coke">Coke</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#drpepper">Dr Pepper</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#sprite">Sprite</a>
+    </li>
+</ul>
+
+<!-- Tab Content -->
+<div class="tab-content">
+    <!-- Coke Tab -->
+    <div id="coke" class="tab-pane fade">
+        <!-- Coke X3D Model -->
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Coke X3D Model</h1>
+                <h2>X3D Models</h2>
+                <p>This X3D model of the Coke can was originally created in Blender. It was exported from Blender to X3D format and prepared for online display.</p>
+                <x3d width="400px" height="400px"> 
+                    <scene>
+                        <inline url="assets/x3d/Coke_Can.x3d"></inline>
+                        <scene>
+                            <transform>
+                                <shape>
+                                    <appearance>
+                                        <material diffuseColor='0.8 0.3 0.3'></material>
+                                        <ImageTexture url="application/assets/x3d/maps/cokeTexture1.jpg"></ImageTexture>
+                                    </appearance>
+                                    <indexedfaceset coordindex='0 1 2 3 -1'>
+                                        <coordinate point='0 0 0 1 0 0 1 1 0 0 1 0'></coordinate>
+                                    </indexedfaceset>
+                                </shape>
+                            </transform>
+                        </scene>
+                    </scene>
+                </x3d>
+        
+            </div>
+            <div class="col-md-6">
+                <!-- Coke Gallery Images -->
+                <h2>Gallery</h2>
+                <div id="coke-gallery" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/gallery_images/coke/coke_image1.png" class="d-block w-100" alt="Coke Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/gallery_images/coke/coke_image2.png" class="d-block w-100" alt="Coke Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/gallery_images/coke/coke_image3.png" class="d-block w-100" alt="Coke Image 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#coke-gallery" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#coke-gallery" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dr Pepper Tab -->
+    <div id="drpepper" class="tab-pane fade">
+        <!-- DrPepper X3D Model -->
+        <div class="row">
+            <div class="col-md-6">
+                <h1>DrPepper X3D Model</h1>
+                <h2>X3D Models</h2>
+                <p>This X3D model of the DrPepper can was originally created in Blender. It was exported from Blender to X3D format and prepared for online display.</p>
+                <x3d width="400px" height="400px"> 
+                    <scene>
+                        <inline url="assets/x3d/Drpepper_Can.x3d"></inline>
+                        <scene>
+                            <transform>
+                                <shape>
+                                    <appearance>
+                                        <material diffuseColor='0.8 0.3 0.3'></material>
+                                        <ImageTexture url="3dapp/application/assets/x3d/maps/drpepperTexture.jpg"></ImageTexture>
+                                    </appearance>
+                                    <indexedfaceset coordindex='0 1 2 3 -1'>
+                                        <coordinate point='0 0 0 1 0 0 1 1 0 0 1 0'></coordinate>
+                                    </indexedfaceset>
+                                </shape>
+                            </transform>
+                        </scene>
+                    </scene>
+                </x3d>
+        
+            </div>
+            <div class="col-md-6">
+                <!-- DrPepper Gallery Images -->
+                <h2>Gallery</h2>
+                <div id="drpepper" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/gallery_images/drpepper/drpepper_image1.png" class="d-block w-100" alt="DrPepper Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/gallery_images/drpepper/drpepper_image2.png" class="d-block w-100" alt="DrPepper Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/gallery_images/drpepper/drpepper_image3.png" class="d-block w-100" alt="DrPepper Image 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#drpepper-gallery" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#drpepper-gallery" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Sprite Tab -->
+    <div id="sprite" class="tab-pane fade">
+    <!-- Sprite X3D Model -->
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Sprite X3D Model</h1>
+            <h2>X3D Models</h2>
+            <p>This X3D model of the Sprite can was originally created in Blender. It was exported from Blender to X3D format and prepared for online display.</p>
+            <x3d width="400px" height="400px"> 
+                <scene>
+                    <inline url="assets/x3d/Sprite_Can.x3d"></inline>
+                    <scene>
+                        <transform>
+                            <shape>
+                                <appearance>
+                                    <material diffuseColor='0.8 0.3 0.3'></material>
+                                    <ImageTexture url="3dapp/application/assets/x3d/maps/spriteTexture1.jpg"></ImageTexture> 
+                                </appearance>
+                                <indexedfaceset coordindex='0 1 2 3 -1'>
+                                    <coordinate point='0 0 0 1 0 0 1 1 0 0 1 0'></coordinate>
+                                </indexedfaceset>
+                            </shape>
+                        </transform>
+                    </scene>
+                </scene>
+            </x3d>
+    
+        </div>
+        <div class="col-md-6">
+            <!-- Sprite Gallery Images -->
+            <h2>Gallery</h2>
+            <div id="sprite-gallery" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/gallery_images/sprite/sprite_image1.png" class="d-block w-100" alt="Sprite Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/gallery_images/sprite/sprite_image2.png" class="d-block w-100" alt="Sprite Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/gallery_images/sprite/sprite_image3.png" class="d-block w-100" alt="Sprite Image 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#sprite-gallery" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#sprite-gallery" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const modelsNavLinks = document.querySelectorAll(".nav-link[data-toggle='tab']");
+        const tabContents = document.querySelectorAll(".tab-pane");
+
+        modelsNavLinks.forEach(function(navLink) {
+            navLink.addEventListener("click", function() {
+                // Hide all tab contents
+                tabContents.forEach(function(tabContent) {
+                    tabContent.style.display = "none";
+                });
+
+                // Show the clicked tab content
+                const targetTabId = this.getAttribute("href").substr(1); // Get the target tab id without the #
+                document.getElementById(targetTabId).style.display = "block";
+            });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const modelsNavLink = document.querySelector("#navModels");
+        const modelsTabContent = document.querySelector("#models-tab-content");
+
+        modelsNavLink.addEventListener("click", function() {
+            modelsTabContent.style.display = modelsTabContent.style.display === "block" ? "none" : "block";
+        });
+    });
+</script>
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    
+    <br> <!-- Temporary break until we style the template -->
+    <!-- Main body -->
+    <div class="container">
+      <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#mainCarousel" data-slide-to="1"></li>
+          <li data-target="#mainCarousel" data-slide-to="2"></li>
+          <li data-target="#mainCarousel" data-slide-to="3"></li>
+        </ul>
+    
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../application/assets/images/homepage_images/wallpaper1.jpg" alt="Image 1" class="d-block w-100">
+            <div class="carousel-caption">
+              <h2>Coca Cola Great Britain</h2>
+              <h3>Founded by Dr John S Pemberton</h3>
+              <p>The Coca Cola Company is the world's leading manufacturer, marketer, and distributor of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands.</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="../application/assets/images/homepage_images/wallpaper2.jpg" alt="Image 2" class="d-block w-100">
+            <div class="carousel-caption">
+              <h2>Coca Cola Global</h2>
+              <h3>A Legacy of Refreshment</h3>
+              <p>Coca Cola has a diverse portfolio with over 500 sparkling and still brands, including 20 brands that generate more than $1 billion in annual retail sales.</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="../application/assets/images/homepage_images/wallpaper3.jpg" alt="Image 3" class="d-block w-100">
+            <div class="carousel-caption">
+              <h2>Innovation and Sustainability</h2>
+              <h3>Leading the Industry</h3>
+              <p>We are constantly innovating to create a better future for our customers, communities, and the planet.</p>
+            </div>   
+          </div>
+        </div>
+            
+        
+  
+      <!-- Row of cards on the grid -->
+      <div class="row">
+        <!-- Coca Cola Column -->
+        <div class="col-sm-4">
+          <div class="card">
+            <a href="#">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">Coca Cola</h3>
+                <p class="card-text">It was 1886, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special!</p>    
+                <a href="#" class="btn btn-primary">Find out more ...</a>   
+            </div>
+          </div>
+        </div>
+      
+        <!-- Sprite Column -->
+        <div class="col-sm-4">
+          <div class="card">
+            <a href="#">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">Sprite</h3>
+                <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries. Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories.</p>
+                <a href="https://www.coca-cola.com/gb/en" class="btn btn-primary">Find out more ...</a>
+            </div>
+          </div>
+        </div>
+          
+        <!-- Dr Pepper Column -->
+        <div class="col-sm-4">
+          <div class="card">
+            <a href="#">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">Dr Pepper</h3>
+                <p class="card-text">Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was created by Texas pharmacist Charles Alderton in 1885.</p>
+                <a href="https://www.coca-cola.com/gb/en" class="btn btn-primary">Find out more ...</a>
+            </div>
+          </div>
+        </div>   
+      </div> 
+    </div>
+
+    <!-- Your 3D App footer -->
+    <nav class="navbar navbar-expand-sm footer">
+        <div class="container">   
+            <div class="navbar-text float-left copyright">
+                <p><span class="align-baseline"></span>&copy 2024 Mobile Web 3D Applications </span></p>
+            </div>
+            <div class="navbar-text social">
+                  <a href="#"><i class="fab fa-github-square fa-2x fa-pull-right"></i></a>
+                  <a href="#"><i class="fab fa-google-plus-square fa-2x fa-pull-right"></i></a>
+                  <a href="#"><i class="fab fa-twitter-square fa-2x fa-pull-right"></i></a>
+                  <a href="#"><i class="fab fa-facebook-square fa-2x fa-pull-right"></i></a>
+            </div>
+        </div>
+    </nav> 
+
+
+          <!-- My 3D App modals -->
+      <!-- Contact modal -->
+      <div class="modal fade" id="contactModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">3D App Contact Details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>Darya Samigullina, Email: ds618@sussex.ac.uk</p>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+              
+     
+  
+            
+          </div> 
+      </div>
+    </div>
+  </div>
+  
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Font Awesome Version 5 -->
+    <!-- <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="all.js"></script> -->
+
+    <!-- Include X3DOM JS -->
+    <script src="js/x3dom.js"></script>
+    <!-- Include Bootstrap and X3DOM JavaScript -->
+     <script src="js/bootstrap.js"></script>
+    <script src="js/x3dom.js"></script>
+  </body>
+</html>
+
+
